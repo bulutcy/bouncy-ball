@@ -1,0 +1,95 @@
+.form-container {
+    margin: 0 auto;
+    width: 450px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.form {
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    max-width: 400px;
+
+}
+
+input:not([type="submit"]) {
+    width: 100%;
+    padding: 4px 28px;
+    margin: 8px 0;
+    display: inline-block;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    transition: transform 0.3s;
+    font-size: 16px;
+    ;
+
+}
+
+input:not([type="submit"]):focus {
+    outline: none;
+    transform: translate(-28px, 0);
+    border-bottom: 1px solid #4CAF50;
+}
+
+input[type=submit] {
+    width: 100%;
+    grid-column: span 2;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+label {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.ball {
+    position: fixed;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    z-index: 1000;
+    transform-origin: bottom;
+    transform: translateY(72px);
+}
+
+.ball-inner {
+    background-image: url('soccer-ball.png');
+    background-size: cover;
+    transition: transform 0.3s;
+    width: 100%;
+    height: 100%;
+}
+
+.boot {
+    background-image: url('boot.png');
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    width: 34px;
+    height: 34px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity rotate 0.3s;
+    transform-origin: top-left;
+}
+
+h2 {
+    text-align: center;
+    font-size: 38px;
+    font-weight: 300;
+}
